@@ -1,0 +1,38 @@
+import hashlib
+import random
+
+from PIL import Image
+import hashlib
+
+image_file = Image.open('1.jpg').tobytes()
+hash_md5 = hashlib.md5(image_file).hexdigest()
+hash_sha256 = hashlib.sha256(image_file).hexdigest()
+hash_sha1 = hashlib.sha1(image_file).hexdigest()
+hash_sha224 = hashlib.sha224(image_file).hexdigest()
+hash_sha384 = hashlib.sha384(image_file).hexdigest()
+hash_sha512 = hashlib.sha512(image_file).hexdigest()
+
+mystring = 'Script by Sawera'
+j_hash_md5 = hashlib.md5(mystring).hexdigest()
+j_hash_sha256 = hashlib.sha256(mystring).hexdigest()
+j_hash_sha1 = hashlib.sha1(mystring).hexdigest()
+j_hash_sha224 = hashlib.sha224(mystring).hexdigest()
+j_hash_sha384 = hashlib.sha384(mystring).hexdigest()
+j_hash_sha512 = hashlib.sha512(mystring).hexdigest()
+
+
+#All possible hash of image file
+print("Image Hash MD5: ", hash_md5)
+print("Image Hash SHA256: ", hash_sha256)
+print("Image Hash SHA1: ", hash_sha1)
+print("Image Hash SHA224: ", hash_sha224)
+print("Image Hash SHA384: ", hash_sha384)
+print("ImageHash SHA512: ", hash_sha512)
+
+#All possible hash of string
+print("MyString Hash MD5: ", j_hash_md5)
+print("MyString Hash SHA256: ", j_hash_sha256)
+print("MyString Hash SHA1: ", j_hash_sha1)
+print("MyString Hash SHA224: ", j_hash_sha224)
+print("MyString Hash SHA384: ", j_hash_sha384)
+print("MyString Hash SHA512: ", j_hash_sha512)
